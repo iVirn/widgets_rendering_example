@@ -1,24 +1,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets_rendering_example/03_stateful_lifecycle.dart';
-import 'package:widgets_rendering_example/09_future_builder.dart';
-import 'package:widgets_rendering_example/12_layout_builder.dart';
 
-import '01_template.dart';
-import '02_stateful.dart';
-import '04_stateful_did_update.dart';
-import '05_many_levels_problem.dart';
-import '06_inherited.dart';
-import '07_inherited_notifier.dart';
-import '08_builder.dart';
-import '10_stream_builder.dart';
-import '11_value_listenable_builder.dart';
+import '01_stateful.dart';
+import '02_stateful_lifecycle.dart';
+import '03_many_levels_problem.dart';
+import '04_inherited.dart';
+import '05_inherited_notifier.dart';
+import '06_builder.dart';
+import '07_future_builder.dart';
+import '08_stream_builder.dart';
+import '09_value_listenable_builder.dart';
+import '10_layout_builder.dart';
 
 enum Example {
-  template,
   stateful,
   stateLifecycle,
-  statefulDidUpdate,
   manyLevels,
   inherited,
   inheritedNotifier,
@@ -51,14 +47,10 @@ class MyApp extends StatelessWidget {
 
   Widget _getExample(Example example) {
     switch (example) {
-      case Example.template:
-        return MyHomePage(title: 'Flutter Demo Home Page');
       case Example.stateful:
         return MyOwnWidget();
       case Example.stateLifecycle:
-        return StatefulLifecycle();
-      case Example.statefulDidUpdate:
-        return StatefulDidUpdate();
+        return StatefulLifecycle(text: 'Hello, world!');
       case Example.manyLevels:
         return RootLevelWidget(title: 'Hello, world!');
       case Example.inherited:

@@ -20,13 +20,13 @@ class _FutureBuilderSampleState extends State<FutureBuilderSample> {
           )
         ],
       ),
-      body: FutureBuilder(
+      body: FutureBuilder<String?>(
         // initialData: 'I am an initial data',
         future: Future<String?>.delayed(Duration(seconds: 3)).then((value) {
           // throw Exception('Casual error');
           return 'I am done, result: ${Random().nextInt(100)}';
         }),
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
+        builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.none) {}
 
           if (snapshot.connectionState == ConnectionState.waiting) {}

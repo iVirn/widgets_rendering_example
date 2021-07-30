@@ -28,7 +28,6 @@ class _StreamBuilderSampleState extends State<StreamBuilderSample> {
     return Scaffold(
       appBar: AppBar(
         title: Text('StreamBuilderSample'),
-        actions: [],
       ),
       body: StreamBuilder<String?>(
         stream: stream,

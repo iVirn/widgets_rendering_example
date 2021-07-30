@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class StatefulLifecycle extends StatefulWidget {
+  final String text;
+
+  const StatefulLifecycle({Key? key, required this.text}) : super(key: key);
+
   @override
   _StatefulLifecycleState createState() => _StatefulLifecycleState();
 }
@@ -24,7 +28,7 @@ class _StatefulLifecycleState extends State<StatefulLifecycle> {
   @override
   void didUpdateWidget(StatefulLifecycle oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print('didUpdateWidget');
+    print('didUpdateWidget, was: ${oldWidget.text}, now: ${widget.text}');
   }
 
   @override
@@ -35,6 +39,7 @@ class _StatefulLifecycleState extends State<StatefulLifecycle> {
 
   @override
   Widget build(BuildContext context) {
+    print('build');
     return Scaffold(
       appBar: AppBar(
         title: Text('State Lifecycle'),
@@ -48,7 +53,7 @@ class _StatefulLifecycleState extends State<StatefulLifecycle> {
           ),
           alignment: Alignment.center,
           child: Text(
-            'Hello, world!',
+            widget.text,
             textDirection: TextDirection.ltr,
             style: TextStyle(color: Colors.black, fontSize: 40),
           ),

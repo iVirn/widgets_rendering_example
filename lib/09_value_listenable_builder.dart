@@ -14,10 +14,9 @@ class ValueListenableSample extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Radius'),
-            ValueListenableBuilder(
+            ValueListenableBuilder<int>(
               valueListenable: _counter,
-              builder: (BuildContext context, int value, Widget? child) =>
-                  Column(
+              builder: (context, value, child) => Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text('$value'),
