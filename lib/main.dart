@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final example = Example.layoutBuilder;
+    final example = Example.stateful;
 
     return MaterialApp(
       title: 'Flutter Demo',
