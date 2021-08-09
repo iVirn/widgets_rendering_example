@@ -27,6 +27,9 @@ class _FutureBuilderSampleState extends State<FutureBuilderSample> {
           return 'I am done, result: ${Random().nextInt(100)}';
         }),
         builder: (context, snapshot) {
+          print('connectionState: ${snapshot.connectionState}');
+          print('data:${snapshot.data}');
+
           if (snapshot.connectionState == ConnectionState.none) {}
 
           if (snapshot.connectionState == ConnectionState.waiting) {}
@@ -54,8 +57,6 @@ class _FutureBuilderSampleState extends State<FutureBuilderSample> {
               ),
             );
           }
-          print('connectionState: ${snapshot.connectionState}');
-          print('data:${snapshot.data}');
           return Center(child: CircularProgressIndicator());
         },
       ),

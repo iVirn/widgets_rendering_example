@@ -3,7 +3,7 @@
 An Example App For Widgets & Rendering Lesson
 
 ## Slides
-* [Available here](https://disk.yandex.ru/d/mRe0qZXvCzNtzg)
+* [Available here](https://disk.yandex.ru/d/NiDY55CePfUd9A)
 
 ## Getting Started
 

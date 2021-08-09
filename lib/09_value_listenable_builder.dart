@@ -36,7 +36,10 @@ class ValueListenableSample extends StatelessWidget {
                     Image.network(
                         'https://bipbap.ru/wp-content/uploads/2019/07/59b21ebebd0470cb6d8b4570.jpg'),
                     Text(Random().nextInt(100).toString(),
-                        style: TextStyle(color: Colors.red, fontSize: 56)),
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 56,
+                        )),
                   ],
                 ),
               ),

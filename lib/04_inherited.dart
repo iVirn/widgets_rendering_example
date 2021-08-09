@@ -47,6 +47,7 @@ class HelloWorldTitleOnlyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
     final title =
         '${TitleProvider.of(context)?.title ?? 'broken data'}\nSize: ${size.toString()}';
 
