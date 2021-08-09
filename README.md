@@ -2,6 +2,9 @@
 
 An Example App For Widgets & Rendering Lesson
 
+## Slides
+* [Available here](https://disk.yandex.ru/d/mRe0qZXvCzNtzg)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
