@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ValueListenableSample extends StatelessWidget {
@@ -27,8 +29,17 @@ class ValueListenableSample extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.network(
-                  'https://bipbap.ru/wp-content/uploads/2019/07/59b21ebebd0470cb6d8b4570.jpg'),
+              child: Container(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image.network(
+                        'https://bipbap.ru/wp-content/uploads/2019/07/59b21ebebd0470cb6d8b4570.jpg'),
+                    Text(Random().nextInt(100).toString(),
+                        style: TextStyle(color: Colors.red, fontSize: 56)),
+                  ],
+                ),
+              ),
             )
           ],
         ),
