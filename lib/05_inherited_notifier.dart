@@ -31,6 +31,7 @@ class _InheritedNotifierExampleState extends State<InheritedNotifierExample>
 
   @override
   Widget build(BuildContext context) {
+    print('InheritedNotifierExample build');
     return Scaffold(
       appBar: AppBar(
         title: Text('InheritedNotifier'),
@@ -76,6 +77,8 @@ class Spinner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // print('spinner build');
+
     final value = SpinModel.of(context) ?? 0;
 
     return Transform.rotate(
